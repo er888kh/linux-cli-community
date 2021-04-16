@@ -7,7 +7,7 @@ from setuptools import setup
 
 version = re.search(
     r'(VERSION = "(\d.\d.\d)")',
-    open("protonvpn_cli/constants.py").read(),
+    open("e_protonvpn_cli/constants.py").read(),
     re.M
 ).group(2)
 
@@ -22,10 +22,10 @@ https://github.com/ProtonVPN/linux-cli
 
 
 setup(
-    name="protonvpn_cli",
-    packages=["protonvpn_cli"],
+    name="e_protonvpn_cli",
+    packages=["e_protonvpn_cli"],
     entry_points={
-        "console_scripts": ["protonvpn = protonvpn_cli.cli:main"]
+        "console_scripts": ["protonvpn = e_protonvpn_cli.cli:main"]
     },
     version=version,
     description="Linux command-line client for ProtonVPN",
@@ -35,7 +35,7 @@ setup(
     license="GPLv3",
     url="https://github.com/er888kh/linux-cli-community",
     package_data={
-        "protonvpn_cli": ["templates/*"]
+        "e_protonvpn_cli": ["templates/*"]
     },
     install_requires=[
         "requests",
