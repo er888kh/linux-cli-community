@@ -350,6 +350,12 @@ def check_root():
 
 def check_update():
     """Return the download URL if an Update is available, False if otherwise"""
+    return False # update checking feature is disabled for now
+
+
+'''
+def check_update():
+    """Return the download URL if an Update is available, False if otherwise"""
 
     def get_latest_version():
         """Return the latest version from pypi"""
@@ -422,6 +428,7 @@ def check_update():
             + "To see what's new, check out the changelog:\n"
             + "https://github.com/ProtonVPN/linux-cli/blob/master/CHANGELOG.md"
         )
+'''
 
 
 def check_init():
