@@ -17,7 +17,7 @@ A fork of the official Linux CLI for ProtonVPN.
 
 For further information and a usage guide, please view the project page:
 
-https://github.com/ProtonVPN/linux-cli
+https://github.com/er888kh/linux-cli-community
 """
 
 
