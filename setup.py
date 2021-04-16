@@ -13,7 +13,7 @@ version = re.search(
 
 
 long_descr = """
-The official Linux CLI for ProtonVPN.
+A fork of the official Linux CLI for ProtonVPN.
 
 For further information and a usage guide, please view the project page:
 
@@ -30,10 +30,10 @@ setup(
     version=version,
     description="Linux command-line client for ProtonVPN",
     long_description=long_descr,
-    author="Proton Technologies AG",
-    author_email="contact@protonvpn.com",
+    author="Erfan Khadem",
+    author_email="erfankhademerkh@gmail.com",
     license="GPLv3",
-    url="https://github.com/protonvpn/linux-cli",
+    url="https://github.com/er888kh/linux-cli-community",
     package_data={
         "protonvpn_cli": ["templates/*"]
     },
@@ -54,5 +54,6 @@ setup(
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
     ],
 )
