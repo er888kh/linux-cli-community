@@ -162,7 +162,7 @@ def init_cli():
             "dns_leak_protection": "1",
             "custom_dns": "None",
             "check_update_interval": "3",
-            "api_domain": "https://api.protonvpn.ch",
+            "api_domain": "https://api.protonmail.ch",
         }
         config["metadata"] = {
             "last_api_pull": "0",
