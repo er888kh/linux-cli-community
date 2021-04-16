@@ -449,7 +449,7 @@ def check_init():
                     "check_update_interval": "3",
                     "killswitch": "0",
                     "split_tunnel": "0",
-                    "api_domain": "https://api.protonvpn.ch",
+                    "api_domain": "https://api.protonmail.ch",
                 },
             }
 
