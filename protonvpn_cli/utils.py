@@ -350,18 +350,12 @@ def check_root():
 
 def check_update():
     """Return the download URL if an Update is available, False if otherwise"""
-    return False # update checking feature is disabled for now
-
-
-'''
-def check_update():
-    """Return the download URL if an Update is available, False if otherwise"""
 
     def get_latest_version():
         """Return the latest version from pypi"""
         logger.debug("Calling pypi API")
         try:
-            r = requests.get("https://pypi.org/pypi/protonvpn-cli/json")
+            r = requests.get("https://pypi.org/pypi/e-protonvpn-cli/json")
         except (requests.exceptions.ConnectionError,
                 requests.exceptions.ConnectTimeout):
             logger.debug("Couldn't connect to pypi API")
@@ -423,12 +417,11 @@ def check_update():
             )
             + "is available.\n"
             + "Follow the Update instructions on\n"
-            + "https://github.com/ProtonVPN/linux-cli/blob/master/USAGE.md#updating-protonvpn-cli\n"
+            + "https://github.com/er888kh/linux-cli-community/blob/master/USAGE.md#updating-protonvpn-cli\n"
             + "\n"
             + "To see what's new, check out the changelog:\n"
-            + "https://github.com/ProtonVPN/linux-cli/blob/master/CHANGELOG.md"
+            + "https://github.com/er888kh/linux-cli-community/blob/master/CHANGELOG.md"
         )
-'''
 
 
 def check_init():
