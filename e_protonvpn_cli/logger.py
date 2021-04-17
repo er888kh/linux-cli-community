@@ -19,7 +19,7 @@ def get_logger():
     if not os.path.isdir(CONFIG_DIR):
         os.mkdir(CONFIG_DIR)
 
-    logger = logging.getLogger("protonvpn-cli")
+    logger = logging.getLogger("e-protonvpn-cli")
     logger.setLevel(logging.DEBUG)
 
     console_handler = logging.StreamHandler()

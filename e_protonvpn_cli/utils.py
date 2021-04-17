@@ -431,7 +431,7 @@ def check_init():
         if not int(get_config_value("USER", "initialized")):
             print(
                 "[!] There has been no profile initialized yet. "
-                "Please run 'protonvpn init'."
+                "Please run 'e_protonvpn init'."
             )
             logger.debug("Initialized Profile not found")
             sys.exit(1)
@@ -466,7 +466,7 @@ def check_init():
     except KeyError:
         print(
             "[!] There has been no profile initialized yet. "
-            "Please run 'protonvpn init'."
+            "Please run 'e_protonvpn init'."
         )
         logger.debug("Initialized Profile not found")
         sys.exit(1)

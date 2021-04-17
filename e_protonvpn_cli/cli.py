@@ -2,22 +2,22 @@
 A CLI for ProtonVPN.
 
 Usage:
-    protonvpn init
-    protonvpn (c | connect) [<servername>] [-p <protocol>]
-    protonvpn (c | connect) [-f | --fastest] [-p <protocol>]
-    protonvpn (c | connect) [--cc <code>] [-p <protocol>]
-    protonvpn (c | connect) [--sc] [-p <protocol>]
-    protonvpn (c | connect) [--p2p] [-p <protocol>]
-    protonvpn (c | connect) [--tor] [-p <protocol>]
-    protonvpn (c | connect) [-r | --random] [-p <protocol>]
-    protonvpn (r | reconnect)
-    protonvpn (d | disconnect)
-    protonvpn (s | status)
-    protonvpn configure
-    protonvpn refresh
-    protonvpn examples
-    protonvpn (-h | --help)
-    protonvpn (-v | --version)
+    e_protonvpn init
+    e_protonvpn (c | connect) [<servername>] [-p <protocol>]
+    e_protonvpn (c | connect) [-f | --fastest] [-p <protocol>]
+    e_protonvpn (c | connect) [--cc <code>] [-p <protocol>]
+    e_protonvpn (c | connect) [--sc] [-p <protocol>]
+    e_protonvpn (c | connect) [--p2p] [-p <protocol>]
+    e_protonvpn (c | connect) [--tor] [-p <protocol>]
+    e_protonvpn (c | connect) [-r | --random] [-p <protocol>]
+    e_protonvpn (r | reconnect)
+    e_protonvpn (d | disconnect)
+    e_protonvpn (s | status)
+    e_protonvpn configure
+    e_protonvpn refresh
+    e_protonvpn examples
+    e_protonvpn (-h | --help)
+    e_protonvpn (-v | --version)
 
 Options:
     -f, --fastest       Select the fastest ProtonVPN server.
@@ -275,28 +275,28 @@ def print_examples():
     """Print some examples on how to use this program"""
 
     examples = (
-        "protonvpn connect\n"
+        "e_protonvpn connect\n"
         "               Display a menu and select server interactively.\n\n"
-        "protonvpn c BE-5\n"
+        "e_protonvpn c BE-5\n"
         "               Connect to BE#5 with the default protocol.\n\n"
-        "protonvpn connect NO#3 -p tcp\n"
+        "e_protonvpn connect NO#3 -p tcp\n"
         "               Connect to NO#3 with TCP.\n\n"
-        "protonvpn c --fastest\n"
+        "e_protonvpn c --fastest\n"
         "               Connect to the fastest VPN Server.\n\n"
-        "protonvpn connect --cc AU\n"
+        "e_protonvpn connect --cc AU\n"
         "               Connect to the fastest Australian server\n"
         "               with the default protocol.\n\n"
-        "protonvpn c --p2p -p tcp\n"
+        "e_protonvpn c --p2p -p tcp\n"
         "               Connect to the fastest torrent server with TCP.\n\n"
-        "protonvpn c --sc\n"
+        "e_protonvpn c --sc\n"
         "               Connect to the fastest Secure-Core server with\n"
         "               the default protocol.\n\n"
-        "protonvpn reconnect\n"
+        "e_protonvpn reconnect\n"
         "               Reconnect the currently active session or connect\n"
         "               to the last connected server.\n\n"
-        "protonvpn disconnect\n"
+        "e_protonvpn disconnect\n"
         "               Disconnect the current session.\n\n"
-        "protonvpn s\n"
+        "e_protonvpn s\n"
         "               Print information about the current session."
     )
 

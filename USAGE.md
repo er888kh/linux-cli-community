@@ -4,15 +4,15 @@ This document provides an extensive guide on how to install and use ProtonVPN-CL
 
 ## Table of Contents
 
-- [ProtonVPN-CLI Usage Documentation](#protonvpn-cli-usage-documentation)
+- [ProtonVPN-CLI Usage Documentation](#e-protonvpn-cli-usage-documentation)
   - [Table of Contents](#table-of-contents)
   - [Installation & Updating](#installation--updating)
     - [Installing from distribution repositories](#installing-from-distribution-repositories)
       - [Fedora](#fedora)
       - [CentOS & RHEL](#centos--rhel)
     - [Installing from PyPI](#installing-from-pypi)
-      - [Installing ProtonVPN-CLI](#installing-protonvpn-cli)
-      - [Updating ProtonVPN-CLI](#updating-protonvpn-cli)
+      - [Installing ProtonVPN-CLI](#installing-e-protonvpn-cli)
+      - [Updating ProtonVPN-CLI](#updating-e-protonvpn-cli)
       - [Uninstall](#uninstall)
     - [Installing in a virtual environment](#installing-in-a-virtual-environment)
       - [Install](#install)
@@ -92,19 +92,19 @@ Installation happens via Python's package manager PIP.
 
 *Note: Make sure to run pip with sudo, so it installs globally and recognizes the command with sudo*
 
-`sudo pip3 install protonvpn-cli`
+`sudo pip3 install e-protonvpn-cli`
 
 #### Updating ProtonVPN-CLI
 
-`sudo pip3 install protonvpn-cli --upgrade`
+`sudo pip3 install e-protonvpn-cli --upgrade`
 
 #### Uninstall
 
-If you want to uninstall ProtonVPN-CLI, run `protonvpn configure` first and purge the configuration. Then uninstall through the package manager you used for installation.
+If you want to uninstall ProtonVPN-CLI, run `e_protonvpn configure` first and purge the configuration. Then uninstall through the package manager you used for installation.
 
 For PIP this would be
 
-`sudo pip3 uninstall protonvpn-cli`
+`sudo pip3 uninstall e-protonvpn-cli`
 
 Bye Bye 😔
 
@@ -126,13 +126,13 @@ If you're having trouble with the normal installation or don't want to install P
 
 3. Now that you're in the virtual environment, install ProtonVPN-CLI
 
-    `pip install protonvpn-cli`
+    `pip install e-protonvpn-cli`
 
     As you're in the virtualenv, `pip` should be the same as `pip3`.
 
-4. You should now have the executable `~/ProtonVPN-CLI/bin/protonvpn`.
+4. You should now have the executable `~/ProtonVPN-CLI/bin/e_protonvpn`.
 
-    `which protonvpn`
+    `which e_protonvpn`
 
 5. If that works, deactivate the virtual environment again
 
@@ -140,7 +140,7 @@ If you're having trouble with the normal installation or don't want to install P
 
 6. Link the executable from above (output of the `which` command) to a PATH folder so you can access it from anywhere
 
-    `sudo ln -sf ~/ProtonVPN-CLI/bin/protonvpn /usr/local/bin/protonvpn`
+    `sudo ln -sf ~/ProtonVPN-CLI/bin/e_protonvpn /usr/local/bin/e_protonvpn`
 
 Now you should be able to use the protonvpn command from anywhere in the system without issues.
 
@@ -152,7 +152,7 @@ Now you should be able to use the protonvpn command from anywhere in the system 
 
 2. Update ProtonVPN-CLI
 
-    `pip install protonvpn-cli --upgrade`
+    `pip install e-protonvpn-cli --upgrade`
 
 3. Deactivate the virtual environment
 
@@ -162,7 +162,7 @@ Now you should be able to use the protonvpn command from anywhere in the system 
 
 1. Purge configuration
 
-    `sudo protonvpn configure` -> `7` -> `y`
+    `sudo e_protonvpn configure` -> `7` -> `y`
 
 2. Delete the ProtonVPN-CLI folder
 
@@ -170,11 +170,11 @@ Now you should be able to use the protonvpn command from anywhere in the system 
 
 3. Delete the symlink
 
-    `sudo unlink /usr/local/bin/protonvpn`
+    `sudo unlink /usr/local/bin/e_protonvpn`
 
 ## Initialization
 
-Before you can use ProtonVPN-CLI, you need to initialize it. Run `sudo protonvpn init` and follow the prompts on the screen.
+Before you can use ProtonVPN-CLI, you need to initialize it. Run `sudo e_protonvpn init` and follow the prompts on the screen.
 
 ## Example Installation on Ubuntu 18.04
 
@@ -184,13 +184,13 @@ Before you can use ProtonVPN-CLI, you need to initialize it. Run `sudo protonvpn
 
 2. Installing ProtonVPN-CLI
 
-   To install ProtonVPN-CLI type `sudo pip3 install protonvpn-cli` in the terminal and confirm with Enter again. It should look something like this:
+   To install ProtonVPN-CLI type `sudo pip3 install e-protonvpn-cli` in the terminal and confirm with Enter again. It should look something like this:
 
    ![ubuntu-pip-install](resources/images/usage-ubuntu-pip-install.png)
 
 3. Initialize the ProtonVPN profile
 
-   Now you have access to the `protonvpn` command. Before using ProtonVPN-CLI you need to initialize your profile. To do this, type `sudo protonvpn init`
+   Now you have access to the `protonvpn` command. Before using ProtonVPN-CLI you need to initialize your profile. To do this, type `sudo e_protonvpn init`
 
    The client will ask you for your OpenVPN username and password. You can find them at https://account.protonvpn.com/account
 
@@ -204,7 +204,7 @@ Before you can use ProtonVPN-CLI, you need to initialize it. Run `sudo protonvpn
 
    ![ubuntu-plan](resources/images/usage-ubuntu-plan.png)
 
-   *IMPORTANT: After your trial expires, you will need to reconfigure your plan to 1) Free. To set this up, enter `sudo protonvpn configure`. Then select `2) ProtonVPN Plan`. Finally, select `1) Free`.*
+   *IMPORTANT: After your trial expires, you will need to reconfigure your plan to 1) Free. To set this up, enter `sudo e_protonvpn configure`. Then select `2) ProtonVPN Plan`. Finally, select `1) Free`.*
 
    Now, you need to choose which default transmission protocol you want to use. UDP is typically the faster option, while TCP is a more reliable protocol that's better suited for unstable connections and in restricted networks. The default selection is UDP.
 
@@ -216,7 +216,7 @@ Before you can use ProtonVPN-CLI, you need to initialize it. Run `sudo protonvpn
 
 4. Connect to ProtonVPN
 
-   You are now ready to connect to ProtonVPN. For example, you can let ProtonVPN-CLI find the fastest server for you. Just type `sudo protonvpn connect -f` and a connection will be established.
+   You are now ready to connect to ProtonVPN. For example, you can let ProtonVPN-CLI find the fastest server for you. Just type `sudo e_protonvpn connect -f` and a connection will be established.
 
    ![ubuntu-connected](resources/images/usage-ubuntu-connected.png)
 
@@ -226,38 +226,38 @@ Before you can use ProtonVPN-CLI, you need to initialize it. Run `sudo protonvpn
 
 | **Command**                       | **Description**                                       |
 |:----------------------------------|:------------------------------------------------------|
-|`protonvpn init`                   | Initialize ProtonVPN profile.                         |
-|`protonvpn connect, c`             | Select a ProtonVPN server and connect to it.          |
-|`protonvpn c [servername]`         | Connect to a specified server.                        |
-|`protonvpn c -r`                   | Connect to a random server.                           |
-|`protonvpn c -f`                   | Connect to the fastest server.                        |
-|`protonvpn c --p2p`                | Connect to the fastest P2P server.                    |
-|`protonvpn c --cc [countrycode]`   | Connect to the fastest server in a specified country. |
-|`protonvpn c --sc`                 | Connect to the fastest Secure Core server.            |
-|`protonvpn reconnect, r`           | Reconnect or connect to the last server used.         |
-|`protonvpn disconnect, d`          | Disconnect the current session.                       |
-|`protonvpn status, s`              | Print connection status.                              |
-|`protonvpn configure`              | Change CLI configuration.                             |
-|`protonvpn refresh`                | Refresh OpenVPN configuration and server data.        |
-|`protonvpn examples`               | Print example commands.                               |
-|`protonvpn --version`              | Display version.                                      |
-|`protonvpn --help`                 | Show help message.                                    |
+|`e_protonvpn init`                   | Initialize ProtonVPN profile.                         |
+|`e_protonvpn connect, c`             | Select a ProtonVPN server and connect to it.          |
+|`e_protonvpn c [servername]`         | Connect to a specified server.                        |
+|`e_protonvpn c -r`                   | Connect to a random server.                           |
+|`e_protonvpn c -f`                   | Connect to the fastest server.                        |
+|`e_protonvpn c --p2p`                | Connect to the fastest P2P server.                    |
+|`e_protonvpn c --cc [countrycode]`   | Connect to the fastest server in a specified country. |
+|`e_protonvpn c --sc`                 | Connect to the fastest Secure Core server.            |
+|`e_protonvpn reconnect, r`           | Reconnect or connect to the last server used.         |
+|`e_protonvpn disconnect, d`          | Disconnect the current session.                       |
+|`e_protonvpn status, s`              | Print connection status.                              |
+|`e_protonvpn configure`              | Change CLI configuration.                             |
+|`e_protonvpn refresh`                | Refresh OpenVPN configuration and server data.        |
+|`e_protonvpn examples`               | Print example commands.                               |
+|`e_protonvpn --version`              | Display version.                                      |
+|`e_protonvpn --help`                 | Show help message.                                    |
 
 All connect options can be used with the `-p` flag to explicitly specify which transmission protocol is used for that connection (either `udp` or `tcp`).
 
 ### Command Explanations
 
-You can see the full list of commands by running `protonvpn --help` and a list of examples by running `protonvpn examples`.
+You can see the full list of commands by running `e_protonvpn --help` and a list of examples by running `e_protonvpn examples`.
 
 **Most of the commands need to be run as root, so use sudo with the commands in this guide!**
 
 Before using any other commands, you need to initialize your profile:
 
-`protonvpn init`
+`e_protonvpn init`
 
 To connect to a server, you always need the `connect` option (or just `c`):
 
-`protonvpn connect`
+`e_protonvpn connect`
 
 Running the above command will give you a menu that lets you select the country, server, and transmission protocol interactively:
 
@@ -267,71 +267,71 @@ Running the above command will give you a menu that lets you select the country,
 
 If you specify a server name after `connect`, you can connect directly to the server of your choice:
 
-`protonvpn connect US-NY#6`
+`e_protonvpn connect US-NY#6`
 
 The server name can be written in several ways. For example, `usny6`, `us-ny-6` or `usny-06` are all valid formats.
 
 To connect to the fastest server, you can use the `--fastest` or `-f` flag:
 
-`protonvpn c --fastest`
+`e_protonvpn c --fastest`
 
-`protonvpn c -f`
+`e_protonvpn c -f`
 
 You can use the `--random` or `-r` flag to connect to a random server:
 
-`protonvpn c -r`
+`e_protonvpn c -r`
 
 There are several other variables to keep in mind when you want to connect to the “fastest” server. You can connect to the fastest server in a country, the fastest Secure Core server, the fastest P2P-enabled server, or the fastest Tor server.
 
 Fastest server in a country (replace UK with the code of the desired country, e.g. `US` for USA, `JP` for Japan, `AU` for Australia, etc.):
 
-`protonvpn c --cc UK`
+`e_protonvpn c --cc UK`
 
 Fastest Secure Core server:
 
-`protonvpn c --sc`
+`e_protonvpn c --sc`
 
 Fastest P2P/torrent server:
 
-`protonvpn c --p2p`
+`e_protonvpn c --p2p`
 
 Fastest Tor server:
 
-`protonvpn c --tor`
+`e_protonvpn c --tor`
 
 All connection methods (except the interactive menu) can be used with the `-p` flag to choose a transmission protocol. Possible values are either `TCP` or `UDP`. If that flag is not used, your connection will use the default transmission protocol you specified during the initialization:
 
 Connect to the fastest server with TCP:
 
-`protonvpn c -f -p TCP`
+`e_protonvpn c -f -p TCP`
 
 Connect to a random server with UDP:
 
-`protonvpn c -rp UDP`
+`e_protonvpn c -rp UDP`
 
 To disconnect the VPN, you need to use the `disconnect` or `d` option:
 
-`protonvpn disconnect`
+`e_protonvpn disconnect`
 
-`protonvpn d`
+`e_protonvpn d`
 
 If you're having trouble with your connection, e.g., because you switched networks or your device woke up from sleeping, you can easily reconnect to the last server with the `reconnect` or `r` option:
 
-`protonvpn reconnect`
+`e_protonvpn reconnect`
 
-`protonvpn r`
+`e_protonvpn r`
 
 If you want to see the status and information of your current connection, you can use the `status` or `s` option, which doesn't require root:
 
-`protonvpn status`
+`e_protonvpn status`
 
-`protonvpn s`
+`e_protonvpn s`
 
 ![status-example](resources/images/usage-status-example.png)
 
 If you want to change the settings you selected during initialization, you can do this with the `configure` option, just follow the prompts to change your username/password, default protocol and so on:
 
-`protonvpn configure`
+`e_protonvpn configure`
 
 ![configuration-example](resources/images/usage-configuration-example.png)
 
@@ -345,11 +345,11 @@ ProtonVPN-CLI features a DNS Leak Protection feature, which makes sure that your
 
 ProtonVPN-CLI accomplishes this by updating the `/etc/resolv.conf` file when you connect to a VPN server, and makes sure that only ProtonVPN's DNS Server is written in this file. It will also backup the previous state of `/etc/resolv.conf` to revert all changes upon disconnection.
 
-Please note that if you change your network (e.g., if you connect to a different WiFi hotspot) without first disconnecting, `/etc/resolv.conf` will likely be updated, which would remove ProtonVPN's DNS Servers. This could cause DNS leaks, so to keep your data safe, use `protonvpn reconnect` after changing your network.
+Please note that if you change your network (e.g., if you connect to a different WiFi hotspot) without first disconnecting, `/etc/resolv.conf` will likely be updated, which would remove ProtonVPN's DNS Servers. This could cause DNS leaks, so to keep your data safe, use `e_protonvpn reconnect` after changing your network.
 
 **Enabling DNS Leak Protection**
 
-To enable DNS Leak Protection, use the `protonvpn configure` command, then press `4` to choose DNS Management. Then press `1` to choose that you want to enable DNS Leak Protection.
+To enable DNS Leak Protection, use the `e_protonvpn configure` command, then press `4` to choose DNS Management. Then press `1` to choose that you want to enable DNS Leak Protection.
 
 After you activate this feature, your DNS queries will be secure.
 
@@ -359,7 +359,7 @@ You can also make a custom DNS server your default for all your ProtonVPN connec
 
 **Enabling Custom DNS**
 
-To configure custom DNS Servers, use the `protonvpn configure` command, then press `4` to choose DNS Management. Then press `2` to choose that you want to configure a custom DNS Server. Now enter the IP addresses of up to 3 DNS Servers you want to use and confirm with Enter.
+To configure custom DNS Servers, use the `e_protonvpn configure` command, then press `4` to choose DNS Management. Then press `2` to choose that you want to configure a custom DNS Server. Now enter the IP addresses of up to 3 DNS Servers you want to use and confirm with Enter.
 
 #### Disabling DNS Management
 
@@ -367,7 +367,7 @@ If you don't want ProtonVPN-CLI to do any changes to your DNS, you can do this a
 
 **Disabling any DNS management**
 
-To enable DNS Leak Protection use the `protonvpn configure` command, then press `4` to choose DNS Management. Then press `3` to disable any DNS management.
+To enable DNS Leak Protection use the `e_protonvpn configure` command, then press `4` to choose DNS Management. Then press `3` to disable any DNS management.
 
 ### IPv6 Leak Protection
 
@@ -385,7 +385,7 @@ It works by replacing your existing iptables rules with custom rules that only a
 
 **Enabling Kill Switch**
 
-To enable Kill Switch, open the configuration menu with `protonvpn configure`, then select `5` for Kill Switch and confirm the activation with either `1` or `2`, depending on your preference.
+To enable Kill Switch, open the configuration menu with `e_protonvpn configure`, then select `5` for Kill Switch and confirm the activation with either `1` or `2`, depending on your preference.
 
 `1` will block access from your directly connected network (e.g. public WiFi) and is recommended for laptops that may connect to untrusted networks.
 
@@ -393,7 +393,7 @@ To enable Kill Switch, open the configuration menu with `protonvpn configure`, t
 
 On the next connection Kill Switch will be enabled.
 
-*Note: Kill Switch only activates on unexpected connection drops. It will not persist through reboots and not activate when calling `protonvpn disconnect`. To simulate the Kill Switch, kill the OpenVPN process while connected with `sudo pkill openvpn`.*
+*Note: Kill Switch only activates on unexpected connection drops. It will not persist through reboots and not activate when calling `e_protonvpn disconnect`. To simulate the Kill Switch, kill the OpenVPN process while connected with `sudo pkill openvpn`.*
 
 ### Split Tunneling
 
@@ -403,13 +403,13 @@ ProtonVPN-CLI features IP-based split tunneling. This means that you can exclude
 
 **Enable Split Tunneling**
 
-To enable Split Tunneling, open the configuration menu with `protonvpn configure`, then select Split Tunneling with `6`. Then confirm with `y`.
+To enable Split Tunneling, open the configuration menu with `e_protonvpn configure`, then select Split Tunneling with `6`. Then confirm with `y`.
 
 Now add the IPs you want to exclude (one IP at a time) or IP ranges in [CIDR notation](https://www.ipaddressguide.com/cidr).
 
 If you want to have a big list of IPs or ranges that you want to exclude, it is recommended to add one IP via the method mentioned above. This will create the file `~/.pvpn-cli/split_tunnel.txt`. You can then paste the IPs or networks in CIDR notation in this file, one IP/network per line.
 
-Then call `protonvpn refresh` to update the OpenVPN template with your excluded IP addresses.
+Then call `e_protonvpn refresh` to update the OpenVPN template with your excluded IP addresses.
 
 ## Enhancements
 
@@ -468,7 +468,7 @@ Systemd is the current init system of most major Linux distributions. This guide
 
    [Service]
    Type=forking
-   ExecStart=/usr/local/bin/protonvpn connect -f
+   ExecStart=/usr/local/bin/e_protonvpn connect -f
    Environment=PVPN_WAIT=300
    Environment=PVPN_DEBUG=1
    Environment=SUDO_USER=user

@@ -378,7 +378,7 @@ def status():
         dns_server = get_config_value("metadata", "dns_server")
     except KeyError:
         print("It looks like there never was a connection.\n"
-              "Please connect with 'protonvpn connect' first.")
+              "Please connect with 'e_protonvpn connect' first.")
         sys.exit(1)
 
     # Check if the VPN Server is reachable
@@ -388,7 +388,7 @@ def status():
     if ping.returncode != 0:
         logger.debug("Could not reach VPN server")
         print("[!] Could not reach the VPN Server")
-        print("[!] You may want to reconnect with 'protonvpn reconnect'")
+        print("[!] You may want to reconnect with 'e_protonvpn reconnect'")
         return
 
     servers = get_servers()
