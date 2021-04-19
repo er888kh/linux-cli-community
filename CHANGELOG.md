@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+- [v2.2.9](#v229)
 - [v2.2.8](#v228)
 - [v2.2.7](#v227)
 - [v2.2.6](#v226)
@@ -16,6 +17,10 @@
 - [v2.1.0](#v210)
 - [v2.0.0](#v200)
 - [v0.1.0](#v010)
+
+## v2.2.9
+
+- Bug fix: Reverted the executable name from `protonvpn` to `e_protonvpn`
 
 ## v2.2.8
 

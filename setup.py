@@ -25,7 +25,7 @@ setup(
     name="e_protonvpn_cli",
     packages=["e_protonvpn_cli"],
     entry_points={
-        "console_scripts": ["protonvpn = e_protonvpn_cli.cli:main"]
+        "console_scripts": ["e_protonvpn = e_protonvpn_cli.cli:main"]
     },
     version=version,
     description="Linux command-line client for ProtonVPN",
