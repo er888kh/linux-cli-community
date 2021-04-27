@@ -23,35 +23,7 @@ The community Linux client described below remains available for those who need 
 
 ## Installation & Updating
 
-For more detailed information on installing, updating and uninstalling, please view the extensive [usage guide](https://github.com/ProtonVPN/linux-cli/blob/master/USAGE.md#installation--updating).
-
-### Installing from distribution repositories
-
-For the following Linux distribution(s), install the official `protonvpn-cli` package:
-
-#### Fedora
-
-```sh
-sudo dnf install -y protonvpn-cli
-```
-
-#### CentOS & RHEL
-
-`protonvpn-cli` is available for CentOS/RHEL 7.x and 8.x via the [EPEL repositories](https://fedoraproject.org/wiki/EPEL).
-
-**For CentOS/RHEL 7.x**:
-
-```sh
-sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-sudo yum install protonvpn-cli
-```
-
-**For CentOS/RHEL 8.x**:
-
-```sh
-sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
-sudo dnf install -y protonvpn-cli
-```
+For more detailed information on installing, updating and uninstalling, please view the extensive [usage guide](https://github.com/er888kh/linux-cli-community/blob/master/USAGE.md#installation--updating).
 
 ### Installing from PyPI
 
@@ -80,11 +52,11 @@ Installation happens via Python's package manager PIP.
 
 *Note: Make sure to run pip with sudo, so it installs globally and recognizes the command with sudo*
 
-`sudo pip3 install protonvpn-cli`
+`sudo pip3 install e-protonvpn-cli`
 
 #### Updating ProtonVPN-CLI
 
-`sudo pip3 install protonvpn-cli --upgrade`
+`sudo pip3 install e-protonvpn-cli --upgrade`
 
 ### Manual Installation from source
 
@@ -94,11 +66,11 @@ It is recommended to do the manual installation in a virtual environment. Especi
 
 1. Clone this repository
 
-    `git clone https://github.com/protonvpn/linux-cli`
+    `git clone https://github.com/er888kh/linux-cli-community`
 
 2. Step into the directory
 
-   `cd linux-cli`
+   `cd linux-cli-community`
 
 3. Install
 
@@ -112,25 +84,25 @@ For updating, you just need to pull the latest version of the repository with gi
 
 | **Command**                       | **Description**                                       |
 |:----------------------------------|:------------------------------------------------------|
-|`protonvpn init`                   | Initialize ProtonVPN profile.                         |
-|`protonvpn connect, c`             | Select a ProtonVPN server and connect to it.          |
-|`protonvpn c [servername]`         | Connect to a specified server.                        |
-|`protonvpn c -r`                   | Connect to a random server.                           |
-|`protonvpn c -f`                   | Connect to the fastest server.                        |
-|`protonvpn c --p2p`                | Connect to the fastest P2P server.                    |
-|`protonvpn c --cc [countrycode]`   | Connect to the fastest server in a specified country. |
-|`protonvpn c --sc`                 | Connect to the fastest Secure Core server.            |
-|`protonvpn reconnect, r`           | Reconnect or connect to the last server used.         |
-|`protonvpn disconnect, d`          | Disconnect the current session.                       |
-|`protonvpn status, s`              | Print connection status.                              |
-|`protonvpn configure`              | Change CLI configuration.                             |
-|`protonvpn refresh`                | Refresh OpenVPN configuration and server data.        |
-|`protonvpn examples`               | Print example commands.                               |
-|`protonvpn --version`              | Display version.                                      |
-|`protonvpn --help`                 | Show help message.                                    |
+|`e_protonvpn init`                   | Initialize ProtonVPN profile.                         |
+|`e_protonvpn connect, c`             | Select a ProtonVPN server and connect to it.          |
+|`e_protonvpn c [servername]`         | Connect to a specified server.                        |
+|`e_protonvpn c -r`                   | Connect to a random server.                           |
+|`e_protonvpn c -f`                   | Connect to the fastest server.                        |
+|`e_protonvpn c --p2p`                | Connect to the fastest P2P server.                    |
+|`e_protonvpn c --cc [countrycode]`   | Connect to the fastest server in a specified country. |
+|`e_protonvpn c --sc`                 | Connect to the fastest Secure Core server.            |
+|`e_protonvpn reconnect, r`           | Reconnect or connect to the last server used.         |
+|`e_protonvpn disconnect, d`          | Disconnect the current session.                       |
+|`e_protonvpn status, s`              | Print connection status.                              |
+|`e_protonvpn configure`              | Change CLI configuration.                             |
+|`e_protonvpn refresh`                | Refresh OpenVPN configuration and server data.        |
+|`e_protonvpn examples`               | Print example commands.                               |
+|`e_protonvpn --version`              | Display version.                                      |
+|`e_protonvpn --help`                 | Show help message.                                    |
 
 All connect options can be used with the `-p` flag to explicitly specify which transmission protocol is used for that connection (either `udp` or `tcp`).
 
 ## Contributing
 
-If you want to contribute to this project, please read the [contribution guide](https://github.com/ProtonVPN/linux-cli/blob/master/CONTRIBUTING.md).
+If you want to contribute to this project, please read the [contribution guide](https://github.com/er888kh/linux-cli-community/blob/master/CONTRIBUTING.md).
